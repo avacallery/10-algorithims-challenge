@@ -1,20 +1,17 @@
 // Complete the countingValleys function below.
-// It's taking an integer and a string and then printing a single integer
-function countingValleys(n, s) {
+
+function countingValleys(steps, direction) {
   let valleysTraveled = 0;
   let hikersAltitude = 0;
-
   // Break up string into each letter in array
-  let sArray = s.split('');
-
-  sArray.forEach((step) => {
-    if (hikersAltitude === 0 && step === 'D') {
+  direction.split('').forEach((direction) => {
+    //calculate if valley was traveled into
+    if (hikersAltitude === 0 && direction === 'D') {
       valleysTraveled++;
     }
-
-    step === 'D' ? hikersAltitude-- : hikersAltitude++;
+    //keep track of altitude
+    direction === 'D' ? hikersAltitude-- : hikersAltitude++;
   });
-
   return valleysTraveled;
 }
 console.log(countingValleys(8, 'DDUUDDUDUUUD'));
