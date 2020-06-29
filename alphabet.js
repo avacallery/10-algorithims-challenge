@@ -23,4 +23,4 @@ function getLetter(s) {
   return letter;
 }
 
-console.log(getLetter('a'));
+console.log(getLetter('aei'));
