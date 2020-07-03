@@ -3,7 +3,7 @@
 // ^ matches beginning of input
 // $ matches end of input
 // (.) captures any character.
-// \1 is a backreference to the first capture group in our expression (i.e., (.)). It stipulates that the character following whatever we matched in step 2 must match whatever was captured inside the parentheses in step 1.
+// \1 is a backreference to the first capture group in our expression
 
 function regexVar() {
   /*
