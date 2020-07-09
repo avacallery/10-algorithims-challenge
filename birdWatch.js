@@ -2,7 +2,7 @@
 
 function migratoryBirds(arr) {
   //initialize bird types (1-5) in order to use ++
-  let birdSpecies = [0, 0, 0, 0, 0];
+  const birdSpecies = [0, 0, 0, 0, 0];
   let countBirdType = 0;
   let maxId = 0;
 
