@@ -2,21 +2,21 @@
 
 function migratoryBirds(arr) {
   //initialize bird types (1-5) in order to use ++
-  const birdSpecies = [0, 0, 0, 0, 0];
-  let countBirdType = 0;
-  let maxId = 0;
+  const birdTypeCounter = [0, 0, 0, 0, 0];
+  let currentHighestSeen = 0;
+  let highestTypeId = 0;
 
   arr.forEach((bird) => {
-    birdSpecies[bird - 1]++;
+    birdTypeCounter[bird - 1]++;
   });
 
   // forEach
   // benefit: touch every item in the collection
 
-  birdSpecies.forEach((type, index) => {
-    if (type > countBirdType) {
-      countBirdType = type;
-      maxId = index + 1;
+  birdTypeCounter.forEach((typeSeen, index) => {
+    if (typeSeen > currentHighestSeen) {
+      currentHighestSeen = typeSeen;
+      highestTypeId = index + 1;
     }
   });
 
@@ -32,7 +32,7 @@ function migratoryBirds(arr) {
   //     }
   //   }
 
-  return maxId;
+  return highestTypeId;
 }
 
 console.log(migratoryBirds([1, 2, 3, 4, 2, 2, 5, 5]));
