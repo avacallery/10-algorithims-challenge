@@ -13,9 +13,9 @@ function breakingRecords(scores) {
     if (score > currentHighScore) {
       currentHighScore = score;
       highAndLow[0]++;
-    }
 
-    if (score < currentLowScore) {
+      //else if instead of two if statements so we skip running both statements at the same time
+    } else if (score < currentLowScore) {
       currentLowScore = score;
       highAndLow[1]++;
     }
