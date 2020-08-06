@@ -11,11 +11,17 @@
 function alternatingCharacters(string) {
   let duplicateCounter = 0;
 
-  for (let i = 0; i < string.length - 1; i++) {
-    if (string[i] === string[i + 1]) {
+  string.forEach((char, index) => {
+    if (char === string[index + 1]) {
       duplicateCounter++;
     }
-  }
+  });
+
+  // for (let i = 0; i < string.length - 1; i++) {
+  //   if (string[i] === string[i + 1]) {
+  //     duplicateCounter++;
+  //   }
+  // }
   return duplicateCounter;
 }
 
