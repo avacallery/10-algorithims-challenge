@@ -9,16 +9,13 @@ function jumpingOnClouds(clouds) {
   // count number of moves it takes to go through array
   // avoid all (1)'s
   let totalMoves = 0;
-  console.log(clouds.indexOf());
 
   for (let i = 0; i < clouds.length - 1; i++) {
-    if (clouds[i] === 0) {
-      totalMoves++;
-    }
+    clouds[i + 2] ? (totalMoves++, i++) : (totalMoves++, (i += 2));
   }
   return totalMoves;
 }
 
-console.log(jumpingOnClouds([0, 0, 0, 0, 1, 0]));
+console.log(jumpingOnClouds([0, 0, 1, 0, 0, 1, 0]));
 
 // array index 0, 1, 2, 3, 4, 5
