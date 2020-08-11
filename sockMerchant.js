@@ -9,8 +9,8 @@ function sockMerchant(numberOfSocks, typeOfSock) {
   let sortedSocks = typeOfSock.slice().sort();
 
   sortedSocks.filter((sock, index) => {
-    if (sortedSocks.indexOf(sock) === index - 1) {
-      console.log(sortedSocks);
+    if (sock === sortedSocks[index + 1]) {
+      sortedSocks.shift();
       sockPairs++;
     }
   });
