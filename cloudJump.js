@@ -8,19 +8,20 @@
 function jumpingOnClouds(clouds) {
   let totalMoves = 0;
 
-  // for (let i = 0; i < clouds.length - 1; i++) {
+  for (let i = 0; i < clouds.length; i++) {
+    clouds[i + 2] ? (totalMoves++, i++) : (totalMoves++, (i += 2));
+  }
   //   clouds[i + 2] ? (totalMoves++, i++) : (totalMoves++, (i += 2));
   // }
 
-  clouds.forEach((cloud, index) => {
-    if (cloud === 0 && clouds.indexOf() === clouds[index + 1]) {
-    }
-    console.log(totalMoves);
-    totalMoves++;
-  });
+  // clouds.forEach((cloud, index) => {
+  //   if (cloud === 0 && clouds[index + 1]) {
+  //   }
+  console.log(totalMoves++);
   return totalMoves;
 }
 
 jumpingOnClouds([0, 0, 1, 0, 0, 1, 0]);
 
 // array index 0, 1, 2, 3, 4, 5
+// 10, 0 0 1 0 0 0 0 1 0 0 --> expected 6 moves
