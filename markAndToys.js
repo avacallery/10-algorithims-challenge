@@ -34,6 +34,7 @@ function maximumToys(prices, budget) {
 }
 
 //   // Solution using for loop and break
+//   // loop through until you reach budget and break out if it goes over the butdget
 //   prices = prices.filter((price) => budget > price);
 //   prices.sort((a, b) => a - b);
 
