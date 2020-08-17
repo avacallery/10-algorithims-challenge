@@ -16,6 +16,7 @@ function maximumToys(prices, budget) {
   // assign index for while loop
   let index = 0;
 
+  // // SOLUTION USING FOR EACH
   //   prices.forEach((toy, index) => {
   //     priceTotal += toy;
   //     if (priceTotal <= budget) {
@@ -32,4 +33,21 @@ function maximumToys(prices, budget) {
   return totalToys;
 }
 
+//   // Solution using for loop and break
+//   prices = prices.filter((price) => budget > price);
+//   prices.sort((a, b) => a - b);
+
+//   let toyCount = 0;
+
+//   for (let i = 0; i < prices.length; i++) {
+//     if (budget >= prices[i]) {
+//       toyCount++;
+//       budget -= prices[i];
+//     } else {
+//       break;
+//     }
+//   }
+//   console.log(toyCount);
+//   return toyCount;
+// }
 maximumToys([1, 12, 5, 111, 200, 1000, 10], 50);
