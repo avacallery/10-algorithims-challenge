@@ -13,13 +13,22 @@ function maximumToys(prices, budget) {
   prices = prices.sort((a, b) => a - b);
   let priceTotal = 0;
   let totalToys = 0;
+  // assign index for while loop
+  let index = 0;
 
-  prices.forEach((toy, index) => {
-    priceTotal += toy;
+  //   prices.forEach((toy, index) => {
+  //     priceTotal += toy;
+  //     if (priceTotal <= budget) {
+  //       totalToys = index + 1;
+  //     }
+  //   });
+
+  while (priceTotal <= budget && index < prices.length) {
+    priceTotal += prices[index++];
     if (priceTotal <= budget) {
-      totalToys = index + 1;
+      totalToys += 1;
     }
-  });
+  }
   return totalToys;
 }
 
