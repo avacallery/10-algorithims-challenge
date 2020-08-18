@@ -5,21 +5,6 @@
 
 // objective: print the minimum number of jumps needed to win the game
 
-// function jumpingOnClouds(clouds) {
-//   let totalMoves = 0;
-
-//   for (let i = 0; i < clouds.length; i++) {
-//     // if (clouds[i] === 0 && clouds[i + 1] === 0) {
-//     //   totalMoves++;
-//     // }
-//     // if (clouds[i + 2] === 0 && clouds[i + 1] === 0) {
-//     //   totalMoves++;
-//     // }
-//   }
-
-//   return totalMoves;
-// }
-
 function jumpingOnClouds(clouds) {
   let totalMoves = 0;
 
