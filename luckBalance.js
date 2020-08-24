@@ -5,7 +5,7 @@
 // loop through contests and decide if each one is a win or loss
 // always lose a zero
 // assume loss and add luck balance for zero
-// create new array of sorted 1 (importantContest) values
+// create new array of sorted 1 values
 
 // loop through new array from highest to lowest
 // subtract first k values, add the remaining values
