@@ -16,23 +16,10 @@
 // If positive and if int, then kangaroos meet up
 
 function kangaroo(x1, v1, x2, v2) {
-  let currentLocation1 = 0;
-  let currentLocation2 = 0;
-  let hopCounter = 0;
-
   if ((x1 > x2 && v1 > v2) || (x2 > x1 && v2 > v1)) {
     return 'NO';
   } else {
-    while (currentLocation2 !== currentLocation1) {
-      hopCounter++;
-      currentLocation1 === x1 + v1 * hopCounter;
-      currentLocation2 === x2 + v2 * hopCounter;
-      console.log(hopCounter);
-      console.log(currentLocation1, currentLocation2);
-      if (currentLocation2 === currentLocation1) {
-        return 'YES';
-      }
-    }
+    return (x2 - x1) % (v2 - v1) === 0 ? 'YES' : 'NO ';
   }
 }
 

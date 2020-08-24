@@ -25,6 +25,7 @@ function solve(arr) {
   const maxNums = Object.keys(windows).map((win) => {
     return Math.max(...windows[win]);
   });
+  console.log(maxNums);
   return maxNums;
 }
 
